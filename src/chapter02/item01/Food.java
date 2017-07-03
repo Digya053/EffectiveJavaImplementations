@@ -16,11 +16,11 @@ public class Food {
 	}
 
 	public static Food cookVegetable(Boolean salt){
-		return new Food("vegetable", true);
+		return new Food("vegetable", salt);
 	}
 
 	public static Food boilMilk(Boolean salt){
-		return new Food("milk", false);
+		return new Food("milk", salt);
 	}
 	
 	public static Map<String, Boolean> newInstance(){
@@ -29,7 +29,7 @@ public class Food {
 
 	public static void main(String[] args){
 		Food vegetable = Food.cookVegetable(true);
-		Food milk = Food.boilMilk(true);
+		Food milk = Food.boilMilk(false);
 
 		Map<String, Boolean> saltInFood = Food.newInstance();
 		saltInFood.put(vegetable.foodName, vegetable.salt);
